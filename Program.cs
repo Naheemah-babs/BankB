@@ -40,10 +40,12 @@ builder.Services.AddHttpClient<IBankApiClient, BankApiClient>();
 // Business logic services.
 builder.Services.AddSingleton<InterbankTransferService>();
 builder.Services.AddSingleton<InterbankOutgoingTransferService>();
+builder.Services.AddHostedService<InterbankReconciliationService>();
 builder.Services.AddSingleton(new AdminService(accounts));
 
 // Automatic pending-payment reconciliation.
 builder.Services.AddHostedService<BillPaymentReconciliationService>();
+
 
 var app = builder.Build();
 
