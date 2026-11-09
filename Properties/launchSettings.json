@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "TatumWelcome2": {
+      "commandName": "Project",
+      "launchBrowser": false,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
